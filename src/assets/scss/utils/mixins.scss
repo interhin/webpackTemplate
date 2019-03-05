@@ -1,0 +1,36 @@
+@import "./vars";
+
+@mixin size($width,$height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin xlMedia {
+  @media (min-width: #{$xl-width}) {
+    @content;
+  }
+}
+
+@mixin lgMedia {
+  @media (min-width: #{$md-width}) and (max-width: #{$lg-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin mdMedia {
+  @media (min-width: #{$sm-width}) and (max-width: #{$md-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin smMedia {
+  @media (min-width: #{$xs-width}) and (max-width: #{$sm-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin xsMedia {
+  @media (max-width: #{$xs-width - 1px}) {
+    @content;
+  }
+}
