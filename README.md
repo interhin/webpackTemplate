@@ -6,3 +6,4 @@
 * Jquery
 * Babel
 * Sass
+* AutoPrefixer
